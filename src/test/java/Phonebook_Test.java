@@ -49,7 +49,17 @@ public class Phonebook_Test {
         assertEquals(0,phonebook.updateContactPhoneNumber(" ","09122159635"));
 
     }
+ @Test
+    public  void deleteContact_Test(){
+     phonebook.addContact(person1);
+     phonebook.addContact(person2);
+     assertEquals(1,phonebook.deleteContact("mahdieh"));
+     assertEquals(1,phonebook.deleteContact("zahra"));
+     assertEquals(0,phonebook.deleteContact("fggfdh"));
+     assertEquals(0,phonebook.deleteContact(""));
+     assertEquals(0,phonebook.deleteContact(" "));
 
+ }
 
 
 
