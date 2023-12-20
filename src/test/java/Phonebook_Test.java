@@ -1,9 +1,13 @@
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 public class Phonebook_Test {
     Person person1 = new Person("mahdieh","09115859055");
     Person person2= new Person("zahra","09037800582");
     Phonebook phonebook = new Phonebook();
+    ArrayList<Person> contacts;
     @Test
     public void getPhoneNumber_Test(){
         phonebook.addContact(person1);
@@ -60,6 +64,15 @@ public class Phonebook_Test {
      assertEquals(0,phonebook.deleteContact(" "));
 
  }
+ @Test
+    public void getAllContacts_Test(){
+     phonebook.addContact(person1);
+     phonebook.addContact(person2);
+       contacts= phonebook.getAllContacts();
+       assertEquals(person1.getName(),contacts.get(0).getName());
+
+
+    }
 
 
 
