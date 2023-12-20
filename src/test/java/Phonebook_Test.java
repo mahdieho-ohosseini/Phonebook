@@ -70,8 +70,7 @@ public class Phonebook_Test {
      phonebook.addContact(person2);
        contacts= phonebook.getAllContacts();
        assertEquals(person1.getName(),contacts.get(0).getName());
-
-
+       assertEquals(person2.getName(),contacts.get(1).getName());
     }
 
 
